@@ -142,11 +142,13 @@ export default function Main() {
             </Grid>
           </Grid>
 
-          {/* Third Components Start */}
-          <Box sx={{ marginTop: '32px' }}>
-            <Grid container spacing={2} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
 
+
+          {/* Third Components Start */}
               {/* Left Section */}
+
+          <Box sx={{ marginTop: '32px' }}>
+            <Grid container spacing={2}>
               <Grid item xs={12} sm={4}>
                 <Box
                   sx={{
@@ -179,61 +181,13 @@ export default function Main() {
                   </Typography>
                 </Box>
               </Grid>
-
-              {/* Right Section */}
-              <Grid item xs={12} sm={8} container spacing={6} sx={{ justifyContent: 'space-between' }}>
-                <Grid item xs={12} sm={6}>
-                  <Box>
-                    <IconButton size="small" color="inherit">
-                      <CopyAll sx={{ color: '#54a3f1' }} />
-                    </IconButton>
-                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#63718b' }}>
-                      Full Documentation
-                    </Typography>
-                    <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf' }}>
-                      Built by developers for developers. Check the foundation and you will find everything inside our documentation.
-                    </Typography>
-                  </Box>
-                  <Box>
-                    <IconButton size="small" color="inherit">
-                      <LocalAtmOutlinedIcon sx={{ color: '#54a3f1' }} />
-                    </IconButton>
-                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#63718b' }}>
-                      Save Time & Money
-                    </Typography>
-                    <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf' }}>
-                      Creating your design from scratch with dedicated designers can be very expensive. Start with our Design System.
-                    </Typography>
-                  </Box>
-                </Grid>
-
-                <Grid item xs={12} sm={6}>
-                  <Box sx={{ paddingBottom: '16px' }}>
-                    <IconButton size="small" color="inherit">
-                      <CopyAll sx={{ color: '#54a3f1' }} />
-                    </IconButton>
-                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#63718b', paddingTop: '8px' }}>
-                      MUI Ready
-                    </Typography>
-                    <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf', paddingTop: '4px' }}>
-                      The world's most popular React components library for building user interfaces.
-                    </Typography>
-                  </Box>
-                  <Box sx={{ paddingTop: '16px' }}>
-                    <IconButton size="small" color="inherit">
-                      <LocalAtmOutlinedIcon sx={{ color: '#54a3f1' }} />
-                    </IconButton>
-                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#63718b', paddingTop: '8px' }}>
-                      Fully Responsive
-                    </Typography>
-                    <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf', paddingTop: '4px' }}>
-                      Regardless of the screen size, the website content will naturally fit the given resolution.
-                    </Typography>
-                  </Box>
-                </Grid>
+              <Grid item xs={12} sm={8}>
+                <Grid item xs={12} sm={4}></Grid>
+                <Grid item xs={12} sm={4}></Grid>
               </Grid>
             </Grid>
           </Box>
+
         </Container>
       </Box>
     </>
