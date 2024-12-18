@@ -2,7 +2,7 @@ import { Badge, Box, Container, Divider, Grid, Grid2, IconButton, Typography } f
 
 import Header from "./Header";
 import PanToolAltOutlinedIcon from '@mui/icons-material/PanToolAltOutlined';
-import { CopyAll } from "@mui/icons-material";
+import { CopyAll, Devices, LibraryBooks, LocalAtm } from "@mui/icons-material";
 import LocalAtmOutlinedIcon from '@mui/icons-material/LocalAtmOutlined';
 // Code: Main component
 export default function Main() {
@@ -80,61 +80,104 @@ export default function Main() {
           marginLeft: 'auto',
           marginRight: 'auto',
           borderRadius: '10px',
+          mt: -18, // Pulls the box upward
+          position: 'relative',
           // paddingTop: '-16px',
         }}
       >
         <Container>
-          <Grid container spacing={2} sx={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-          }}>
+          <Grid
+            container
+            spacing={2}
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              textAlign: 'center',
+              gap: 2,
+            }}
+          >
+            {/* First Item */}
             <Grid item xs={12} sm={3}>
-              <Box sx={{
-                textAlign: 'center',
-                display: 'flex',
-                alignItems: "center",
-                justifyContent: 'center',
-                flexDirection: "column",
-                fontFamily: 'Roboto',
-              }}>
-                <Typography sx={{ color: '#2a84eb', fontSize: '30px', fontWeight: 'bold' }}>300+</Typography>
-                <Typography sx={{ color: '#435572', fontSize: '15px', fontWeight: '800' }}>Coded Elements</Typography>
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                <Typography
+                  sx={{ color: '#2a84eb', fontSize: '40px', fontWeight: 'bold' }}
+                >
+                  300+
+                </Typography>
+                <Typography
+                  sx={{ color: '#435572', fontSize: '20px', fontWeight: '800', mb: 1 }}
+                >
+                  Coded Elements
+                </Typography>
                 <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf' }}>
                   From buttons, to inputs, navbars, alerts or cards, you are covered
                 </Typography>
               </Box>
             </Grid>
-            <Divider orientation="vertical" variant="middle" flexItem />
 
+            <Divider
+              orientation="vertical"
+              flexItem
+              sx={{ display: { xs: 'none', sm: 'block' } }}
+            />
             <Grid item xs={12} sm={3}>
-              <Box sx={{
-                textAlign: 'center',
-                display: 'flex',
-                alignItems: "center",
-                justifyContent: 'center',
-                flexDirection: "column",
-                fontFamily: 'Roboto',
-              }}>
-                <Typography sx={{ color: '#2a84eb', fontSize: '30px', fontWeight: 'bold' }}>100+</Typography>
-                <Typography sx={{ color: '#435572', fontSize: '15px', fontWeight: '800' }}>Design Blocks</Typography>
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                <Typography
+                  sx={{ color: '#2a84eb', fontSize: '40px', fontWeight: 'bold' }}
+                >
+                  100+
+                </Typography>
+                <Typography
+                  sx={{ color: '#435572', fontSize: '20px', fontWeight: '800', mb: 1 }}
+                >
+                  Design Blocks
+                </Typography>
                 <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf' }}>
                   Mix the sections, change the colors and unleash your creativity
                 </Typography>
               </Box>
             </Grid>
-            <Divider orientation="vertical" variant="middle" flexItem />
+
+            <Divider
+              orientation="vertical"
+              flexItem
+              sx={{ display: { xs: 'none', sm: 'block' } }}
+            />
 
             <Grid item xs={12} sm={3}>
-              <Box sx={{
-                textAlign: 'center',
-                display: 'flex',
-                alignItems: "center",
-                justifyContent: 'center',
-                flexDirection: "column",
-              }}>
-                <Typography sx={{ color: '#2a84eb', fontSize: '30px', fontWeight: 'bold' }}>41</Typography>
-                <Typography sx={{ color: '#435572', fontSize: '15px', fontWeight: '800' }}>Pages</Typography>
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                <Typography
+                  sx={{ color: '#2a84eb', fontSize: '40px', fontWeight: 'bold' }}
+                >
+                  41
+                </Typography>
+                <Typography
+                  sx={{ color: '#435572', fontSize: '20px', fontWeight: '800', }}
+                >
+                  Pages
+                </Typography>
                 <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf' }}>
                   Save 3-4 weeks of work when you use our pre-made pages for your website
                 </Typography>
@@ -142,171 +185,150 @@ export default function Main() {
             </Grid>
           </Grid>
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 0642c87165c694c491f99eb5ff99ac65208e0c8e
           {/* Third Components Start */}
-              {/* Left Section */}
-
-          <Box sx={{ marginTop: '32px' }}>
-<<<<<<< HEAD
-            <Grid container spacing={2} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-
-              {/* Left Section */}
-=======
-            <Grid
-              container
-              spacing={2}
-              sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
-            >
-
->>>>>>> 0642c87165c694c491f99eb5ff99ac65208e0c8e
-              <Grid item xs={12} sm={4}>
+          <Box sx={{ mt: 8, mx: 'auto', maxWidth: '1200px' }}>
+            <Grid container spacing={4} alignItems="center" justifyContent="center">
+              <Grid item xs={12} sm={4} sx={{ pr: 2 }}>
                 <Box
                   sx={{
-                    backgroundImage: 'url(https://demos.creative-tim.com/otis-kit-pro/static/media/rotating-card-bg-front.bdcdfadc0dacb9bc5f23.jpeg)',
-                    backgroundColor: 'rgba(98,175,241, 0.5)', // Apply a semi-transparent black color as overlay
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    flexDirection: 'column',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    borderRadius: '10px',
-                    padding: '16px',
+                    width: '100%',
+                    height: '100%',
+                    perspective: '1000px', // 3D perspective
                   }}
                 >
-                  <PanToolAltOutlinedIcon sx={{ color: 'white', fontSize: '50px' }} />
-                  <Typography
+                  <Box
                     sx={{
-                      color: 'white',
-                      fontSize: '30px',
-                      fontWeight: 'bold',
-                      textAlign: 'center',
-                      marginBottom: '8px',
+                      height: '100%',
+                      transformStyle: 'preserve-3d',
+                      transition: 'transform 0.6s',
+                      '&:hover': {
+                        transform: 'rotateY(180deg)', // Rotate on hover
+                      },
                     }}
                   >
-                    Feel The <span>Material Kit</span>
-                  </Typography>
-                  <Typography sx={{ textAlign: 'center', color: 'white' }}>
-                    All The MUI components that you need in a development have been re-designed with the new look.
-                  </Typography>
+                    {/* Front Side */}
+                    <Box
+                      sx={{
+                        backgroundImage:
+                          'url(https://demos.creative-tim.com/otis-kit-pro/static/media/rotating-card-bg-front.bdcdfadc0dacb9bc5f23.jpeg)',
+                        backgroundColor: 'rgba(33, 150, 243, 0.7)',
+                        borderRadius: '12px',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        p: 4,
+                        height: '100%',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        textAlign: 'center',
+                        backfaceVisibility: 'hidden', // Hide the back side while front is visible
+                      }}
+                    >
+                      <PanToolAltOutlinedIcon sx={{ color: 'white', fontSize: '50px', mb: 2 }} />
+                      <Typography variant="h5" sx={{ fontWeight: 'bold', color: 'white', mb: 1 }}>
+                        Feel the <br /> Material Kit
+                      </Typography>
+                      <Typography sx={{ color: 'black', opacity: 0.9 }}>
+                        All the MUI components that you need in a development have been re-designed with the new look.
+                      </Typography>
+                    </Box>
+
+                    {/* Back Side (Hidden initially) */}
+                    <Box
+                      sx={{
+                        backgroundColor: 'rgba(33, 150, 243, 0.9)', // Change the background as needed
+                        borderRadius: '12px',
+                        height: '100%',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        textAlign: 'center',
+                        transform: 'rotateY(180deg)', // Initially rotated 180 degrees (hidden)
+                        backfaceVisibility: 'hidden', // Hide the back side while front is visible
+                        p: 4,
+                      }}
+                    >
+                      {/* You can add similar content to the back side or customize it */}
+                      <Typography variant="h5" sx={{ fontWeight: 'bold', color: 'white', mb: 1 }}>
+                        Back Side Content
+                      </Typography>
+                      <Typography sx={{ color: 'white', opacity: 0.8 }}>
+                        More details about the Material Kit can be found here.
+                      </Typography>
+                    </Box>
+                  </Box>
                 </Box>
               </Grid>
-<<<<<<< HEAD
 
-              {/* Right Section */}
-              <Grid item xs={12} sm={8} container spacing={6} sx={{ justifyContent: 'space-between' }}>
-                <Grid item xs={12} sm={6}>
-                  <Box>
-=======
-              {/* Right Section */}
-              <Grid
-                item
-                xs={12}
-                sm={8}
-                container
-                spacing={2}
-                sx={{ justifyContent: 'center' }}
-              >
-                <Grid item xs={12} sm={6}>
-                  <Box sx={{}}>
->>>>>>> 0642c87165c694c491f99eb5ff99ac65208e0c8e
-                    <IconButton size="small" color="inherit">
-                      <CopyAll sx={{ color: '#54a3f1' }} />
-                    </IconButton>
-                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#63718b' }}>
-                      Full Documentation
-                    </Typography>
-<<<<<<< HEAD
-                    <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf' }}>
-                      Built by developers for developers. Check the foundation and you will find everything inside our documentation.
-                    </Typography>
-                  </Box>
-=======
-                    <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf'}} >
-                      Built by developers for developers. Check the foundation and you will find everything inside our documentation.
-                    </Typography>
-                  </Box>
-                  <Box >
-                    <IconButton size="small" color="inherit">
-                      <LocalAtmOutlinedIcon sx={{ color: '#54a3f1' }} />
-                    </IconButton>
-                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#63718b' }}>
-                      Save Time & Money
-                    </Typography>
-                    <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf'}}>
-                      Creating your design from scratch with dedicated designers can be very expensive. Start with our Design System.
-                    </Typography>
-                  </Box>
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  <Box sx={{ marginBottom: '16px' }}>
-                    <IconButton size="small" color="inherit">
-                      <CopyAll sx={{ color: '#54a3f1' }} />
-                    </IconButton>
-                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#63718b' }}>
-                      MUI Ready
-                    </Typography>
-                    <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf'}}>
-                      The world's most popular React components library for building user interfaces.
-                    </Typography>
-                  </Box>
->>>>>>> 0642c87165c694c491f99eb5ff99ac65208e0c8e
-                  <Box>
-                    <IconButton size="small" color="inherit">
-                      <LocalAtmOutlinedIcon sx={{ color: '#54a3f1' }} />
-                    </IconButton>
-                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#63718b' }}>
-<<<<<<< HEAD
-                      Save Time & Money
-                    </Typography>
-                    <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf' }}>
-                      Creating your design from scratch with dedicated designers can be very expensive. Start with our Design System.
-                    </Typography>
-                  </Box>
-                </Grid>
 
-                <Grid item xs={12} sm={6}>
-                  <Box sx={{ paddingBottom: '16px' }}>
-                    <IconButton size="small" color="inherit">
-                      <CopyAll sx={{ color: '#54a3f1' }} />
-                    </IconButton>
-                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#63718b', paddingTop: '8px' }}>
-                      MUI Ready
-                    </Typography>
-                    <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf', paddingTop: '4px' }}>
-                      The world's most popular React components library for building user interfaces.
-                    </Typography>
-                  </Box>
-                  <Box sx={{ paddingTop: '16px' }}>
-                    <IconButton size="small" color="inherit">
-                      <LocalAtmOutlinedIcon sx={{ color: '#54a3f1' }} />
-                    </IconButton>
-                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#63718b', paddingTop: '8px' }}>
-                      Fully Responsive
-                    </Typography>
-                    <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf', paddingTop: '4px' }}>
-=======
-                      Fully Responsive
-                    </Typography>
-                    <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf'}}>
->>>>>>> 0642c87165c694c491f99eb5ff99ac65208e0c8e
-                      Regardless of the screen size, the website content will naturally fit the given resolution.
-                    </Typography>
-                  </Box>
+              {/* Right Content Section */}
+              <Grid item xs={12} sm={8} sx={{ pl: 2 }}>
+                <Grid container spacing={4}>
+                  <Grid item xs={12} sm={6}>
+                    <Box sx={{ display: 'flex', alignItems: 'flex-start' }}>
+                      <CopyAll sx={{ color: '#2196F3', fontSize: '32px', mr: 2 }} />
+                      <Box>
+                        <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#333' }}>
+                          Full Documentation
+                        </Typography>
+                        <Typography sx={{ color: '#777', mt: 1 }}>
+                          Built by developers for developers. Check the foundation and you will find
+                          everything inside our documentation.
+                        </Typography>
+                      </Box>
+                    </Box>
+                  </Grid>
+
+                  <Grid item xs={12} sm={6}>
+                    <Box sx={{ display: 'flex', alignItems: 'flex-start' }}>
+                      <LibraryBooks sx={{ color: '#2196F3', fontSize: '32px', mr: 2 }} />
+                      <Box>
+                        <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#333' }}>
+                          MUI Ready
+                        </Typography>
+                        <Typography sx={{ color: '#777', mt: 1 }}>
+                          The world's most popular React components library for building user interfaces.
+                        </Typography>
+                      </Box>
+                    </Box>
+                  </Grid>
+
+                  {/* Bottom Row */}
+                  <Grid item xs={12} sm={6}>
+                    <Box sx={{ display: 'flex', alignItems: 'flex-start' }}>
+                      <LocalAtm sx={{ color: '#2196F3', fontSize: '32px', mr: 2 }} />
+                      <Box>
+                        <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#333' }}>
+                          Save Time & Money
+                        </Typography>
+                        <Typography sx={{ color: '#777', mt: 1 }}>
+                          Creating your design from scratch with dedicated designers can be very expensive.
+                          Start with our Design System.
+                        </Typography>
+                      </Box>
+                    </Box>
+                  </Grid>
+
+                  <Grid item xs={12} sm={6}>
+                    <Box sx={{ display: 'flex', alignItems: 'flex-start' }}>
+                      <Devices sx={{ color: '#2196F3', fontSize: '32px', mr: 2 }} />
+                      <Box>
+                        <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#333' }}>
+                          Fully Responsive
+                        </Typography>
+                        <Typography sx={{ color: '#777', mt: 1 }}>
+                          Regardless of the screen size, the website content will naturally fit the given
+                          resolution.
+                        </Typography>
+                      </Box>
+                    </Box>
+                  </Grid>
                 </Grid>
               </Grid>
             </Grid>
           </Box>
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0642c87165c694c491f99eb5ff99ac65208e0c8e
         </Container>
       </Box>
     </>
