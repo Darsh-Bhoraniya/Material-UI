@@ -12,7 +12,7 @@ function Header() {
     <>
       <Container>
         <AppBar
-          position="static"
+          position="sticky"
           sx={{
             backgroundColor: '#ccced1',
             borderRadius: '10px',
