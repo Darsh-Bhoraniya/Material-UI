@@ -1,8 +1,9 @@
-import { Badge, Box, Container, Divider, Grid, Grid2, Typography } from "@mui/material"; // Updated to Grid
+import { Badge, Box, Container, Divider, Grid, Grid2, IconButton, Typography } from "@mui/material"; // Updated to Grid
 
 import Header from "./Header";
 import PanToolAltOutlinedIcon from '@mui/icons-material/PanToolAltOutlined';
-
+import { CopyAll } from "@mui/icons-material";
+import LocalAtmOutlinedIcon from '@mui/icons-material/LocalAtmOutlined';
 // Code: Main component
 export default function Main() {
   return (
@@ -130,9 +131,17 @@ export default function Main() {
 
 
 
+
           {/* Third Components Start */}
+              {/* Left Section */}
+
           <Box sx={{ marginTop: '32px' }}>
-            <Grid container spacing={2}>
+            <Grid
+              container
+              spacing={2}
+              sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
+            >
+
               <Grid item xs={12} sm={4}>
                 <Box
                   sx={{
@@ -146,27 +155,87 @@ export default function Main() {
                     backgroundColor: 'rgb(52, 71, 103)',
                     opacity: 0.9,
                     borderRadius: '10px',
+                    padding: '16px',
                   }}
                 >
                   <PanToolAltOutlinedIcon sx={{ color: 'white', fontSize: '50px' }} />
-                  <Typography sx={{
-                    color: 'white',
-                    fontSize: '30px',
-                    fontWeight: 'bold',
-                    textAlign: 'center',
-                  }}>Feel The<span> Material Kit</span></Typography>
-                  <Typography sx={{
-                    textAlign: 'center',
-                    color: 'white',
-                  }}>All The MUI components that you need in a development have been re-design with the new look</Typography>
+                  <Typography
+                    sx={{
+                      color: 'white',
+                      fontSize: '30px',
+                      fontWeight: 'bold',
+                      textAlign: 'center',
+                      marginBottom: '8px',
+                    }}
+                  >
+                    Feel The <span>Material Kit</span>
+                  </Typography>
+                  <Typography sx={{ textAlign: 'center', color: 'white' }}>
+                    All The MUI components that you need in a development have been re-designed with the new look.
+                  </Typography>
                 </Box>
               </Grid>
-              <Grid item xs={12} sm={8}>
-                <Grid item xs={12} sm={4}></Grid>
-                <Grid item xs={12} sm={4}></Grid>
+              {/* Right Section */}
+              <Grid
+                item
+                xs={12}
+                sm={8}
+                container
+                spacing={2}
+                sx={{ justifyContent: 'center' }}
+              >
+                <Grid item xs={12} sm={6}>
+                  <Box sx={{}}>
+                    <IconButton size="small" color="inherit">
+                      <CopyAll sx={{ color: '#54a3f1' }} />
+                    </IconButton>
+                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#63718b' }}>
+                      Full Documentation
+                    </Typography>
+                    <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf'}} >
+                      Built by developers for developers. Check the foundation and you will find everything inside our documentation.
+                    </Typography>
+                  </Box>
+                  <Box >
+                    <IconButton size="small" color="inherit">
+                      <LocalAtmOutlinedIcon sx={{ color: '#54a3f1' }} />
+                    </IconButton>
+                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#63718b' }}>
+                      Save Time & Money
+                    </Typography>
+                    <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf'}}>
+                      Creating your design from scratch with dedicated designers can be very expensive. Start with our Design System.
+                    </Typography>
+                  </Box>
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <Box sx={{ marginBottom: '16px' }}>
+                    <IconButton size="small" color="inherit">
+                      <CopyAll sx={{ color: '#54a3f1' }} />
+                    </IconButton>
+                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#63718b' }}>
+                      MUI Ready
+                    </Typography>
+                    <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf'}}>
+                      The world's most popular React components library for building user interfaces.
+                    </Typography>
+                  </Box>
+                  <Box>
+                    <IconButton size="small" color="inherit">
+                      <LocalAtmOutlinedIcon sx={{ color: '#54a3f1' }} />
+                    </IconButton>
+                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#63718b' }}>
+                      Fully Responsive
+                    </Typography>
+                    <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf'}}>
+                      Regardless of the screen size, the website content will naturally fit the given resolution.
+                    </Typography>
+                  </Box>
+                </Grid>
               </Grid>
             </Grid>
           </Box>
+
 
         </Container>
       </Box>
