@@ -20,6 +20,7 @@ export default function Main() {
           flexDirection: 'column',
           alignItems: 'center',
           minHeight: '90vh',
+          paddingTop: '-10px',
         }}
       >
         <Header />
@@ -69,16 +70,17 @@ export default function Main() {
         </Box>
       </Box>
 
-      {/* Second Component Start from here */}
+      {/* Second Main Component Start from here */}
       <Box
         sx={{
           backgroundColor: '#f4f5f7',
-          zIndex: 1,
+          zIndex: 2,
           width: '95%',
           boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3), -4px 0px 8px rgba(0, 0, 0, 0.3)',
           marginLeft: 'auto',
           marginRight: 'auto',
           borderRadius: '10px',
+          paddingTop: '-16px',
         }}
       >
         <Container>
@@ -86,15 +88,18 @@ export default function Main() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            // gap: 2,
           }}>
             <Grid item xs={12} sm={3}>
               <Box sx={{
-                textAlign: 'center', display: 'flex', alignItems: "center", justifyContent: 'center', flexDirection: "column"
-                , fontFamily: 'Roboto'
+                textAlign: 'center',
+                display: 'flex',
+                alignItems: "center",
+                justifyContent: 'center',
+                flexDirection: "column",
+                fontFamily: 'Roboto',
               }}>
                 <Typography sx={{ color: '#2a84eb', fontSize: '30px', fontWeight: 'bold' }}>300+</Typography>
-                <Typography sx={{ color: '#435572', fontSize: '15px', fontWeight: '800', }}>Coded Elements</Typography>
+                <Typography sx={{ color: '#435572', fontSize: '15px', fontWeight: '800' }}>Coded Elements</Typography>
                 <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf' }}>
                   From buttons, to inputs, navbars, alerts or cards, you are covered
                 </Typography>
@@ -104,8 +109,12 @@ export default function Main() {
 
             <Grid item xs={12} sm={3}>
               <Box sx={{
-                textAlign: 'center', display: 'flex', alignItems: "center", justifyContent: 'center', flexDirection: "column"
-                , fontFamily: 'Roboto'
+                textAlign: 'center',
+                display: 'flex',
+                alignItems: "center",
+                justifyContent: 'center',
+                flexDirection: "column",
+                fontFamily: 'Roboto',
               }}>
                 <Typography sx={{ color: '#2a84eb', fontSize: '30px', fontWeight: 'bold' }}>100+</Typography>
                 <Typography sx={{ color: '#435572', fontSize: '15px', fontWeight: '800' }}>Design Blocks</Typography>
@@ -115,10 +124,14 @@ export default function Main() {
               </Box>
             </Grid>
             <Divider orientation="vertical" variant="middle" flexItem />
+
             <Grid item xs={12} sm={3}>
               <Box sx={{
-                textAlign: 'center', display: 'flex', alignItems: "center", justifyContent: 'center', flexDirection: "column"
-
+                textAlign: 'center',
+                display: 'flex',
+                alignItems: "center",
+                justifyContent: 'center',
+                flexDirection: "column",
               }}>
                 <Typography sx={{ color: '#2a84eb', fontSize: '30px', fontWeight: 'bold' }}>41</Typography>
                 <Typography sx={{ color: '#435572', fontSize: '15px', fontWeight: '800' }}>Pages</Typography>
@@ -129,31 +142,22 @@ export default function Main() {
             </Grid>
           </Grid>
 
-
-
-
           {/* Third Components Start */}
-              {/* Left Section */}
-
           <Box sx={{ marginTop: '32px' }}>
-            <Grid
-              container
-              spacing={2}
-              sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
-            >
+            <Grid container spacing={2} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
 
+              {/* Left Section */}
               <Grid item xs={12} sm={4}>
                 <Box
                   sx={{
                     backgroundImage: 'url(https://demos.creative-tim.com/otis-kit-pro/static/media/rotating-card-bg-front.bdcdfadc0dacb9bc5f23.jpeg)',
+                    backgroundColor: 'rgba(98,175,241, 0.5)', // Apply a semi-transparent black color as overlay
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
                     flexDirection: 'column',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
-                    backgroundColor: 'rgb(52, 71, 103)',
-                    opacity: 0.9,
                     borderRadius: '10px',
                     padding: '16px',
                   }}
@@ -175,49 +179,19 @@ export default function Main() {
                   </Typography>
                 </Box>
               </Grid>
+
               {/* Right Section */}
-              <Grid
-                item
-                xs={12}
-                sm={8}
-                container
-                spacing={2}
-                sx={{ justifyContent: 'center' }}
-              >
+              <Grid item xs={12} sm={8} container spacing={6} sx={{ justifyContent: 'space-between' }}>
                 <Grid item xs={12} sm={6}>
-                  <Box sx={{}}>
+                  <Box>
                     <IconButton size="small" color="inherit">
                       <CopyAll sx={{ color: '#54a3f1' }} />
                     </IconButton>
                     <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#63718b' }}>
                       Full Documentation
                     </Typography>
-                    <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf'}} >
+                    <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf' }}>
                       Built by developers for developers. Check the foundation and you will find everything inside our documentation.
-                    </Typography>
-                  </Box>
-                  <Box >
-                    <IconButton size="small" color="inherit">
-                      <LocalAtmOutlinedIcon sx={{ color: '#54a3f1' }} />
-                    </IconButton>
-                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#63718b' }}>
-                      Save Time & Money
-                    </Typography>
-                    <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf'}}>
-                      Creating your design from scratch with dedicated designers can be very expensive. Start with our Design System.
-                    </Typography>
-                  </Box>
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  <Box sx={{ marginBottom: '16px' }}>
-                    <IconButton size="small" color="inherit">
-                      <CopyAll sx={{ color: '#54a3f1' }} />
-                    </IconButton>
-                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#63718b' }}>
-                      MUI Ready
-                    </Typography>
-                    <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf'}}>
-                      The world's most popular React components library for building user interfaces.
                     </Typography>
                   </Box>
                   <Box>
@@ -225,9 +199,34 @@ export default function Main() {
                       <LocalAtmOutlinedIcon sx={{ color: '#54a3f1' }} />
                     </IconButton>
                     <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#63718b' }}>
+                      Save Time & Money
+                    </Typography>
+                    <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf' }}>
+                      Creating your design from scratch with dedicated designers can be very expensive. Start with our Design System.
+                    </Typography>
+                  </Box>
+                </Grid>
+
+                <Grid item xs={12} sm={6}>
+                  <Box sx={{ paddingBottom: '16px' }}>
+                    <IconButton size="small" color="inherit">
+                      <CopyAll sx={{ color: '#54a3f1' }} />
+                    </IconButton>
+                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#63718b', paddingTop: '8px' }}>
+                      MUI Ready
+                    </Typography>
+                    <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf', paddingTop: '4px' }}>
+                      The world's most popular React components library for building user interfaces.
+                    </Typography>
+                  </Box>
+                  <Box sx={{ paddingTop: '16px' }}>
+                    <IconButton size="small" color="inherit">
+                      <LocalAtmOutlinedIcon sx={{ color: '#54a3f1' }} />
+                    </IconButton>
+                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#63718b', paddingTop: '8px' }}>
                       Fully Responsive
                     </Typography>
-                    <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf'}}>
+                    <Typography sx={{ fontFamily: 'Roboto', color: '#c1c5cf', paddingTop: '4px' }}>
                       Regardless of the screen size, the website content will naturally fit the given resolution.
                     </Typography>
                   </Box>
@@ -235,8 +234,6 @@ export default function Main() {
               </Grid>
             </Grid>
           </Box>
-
-
         </Container>
       </Box>
     </>
