@@ -80,7 +80,7 @@ export default function Main() {
           marginLeft: 'auto',
           marginRight: 'auto',
           borderRadius: '10px',
-          paddingTop: '-16px',
+          // paddingTop: '-16px',
         }}
       >
         <Container>
