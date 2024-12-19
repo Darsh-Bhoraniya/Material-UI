@@ -1,4 +1,4 @@
-import { Badge, Box, Container, Divider, Grid, Grid2, IconButton, Typography } from "@mui/material"; // Updated to Grid
+import { Badge, Box, Container, Divider, Grid, Grid2, IconButton, Input, Typography } from "@mui/material"; // Updated to Grid
 
 import Header from "./Header";
 import PanToolAltOutlinedIcon from '@mui/icons-material/PanToolAltOutlined';
@@ -7,6 +7,10 @@ import LocalAtmOutlinedIcon from '@mui/icons-material/LocalAtmOutlined';
 import { Combination } from "./Combination";
 import { BlockSection } from "./BlockSection";
 import { DesignBlocks } from "./DesignBlocks";
+import { Navigation } from "./Navigation";
+import { InputAreas } from "./InputAreas";
+import { AttentionCatchers } from "./AttentionCatchers";
+import { Elements } from "./Elements";
 // Code: Main component
 export default function Main() {
   return (
@@ -86,6 +90,7 @@ export default function Main() {
           mt: -18, // Pulls the box upward
           position: 'relative',
           // paddingTop: '-16px',
+          pb: 10,
         }}
       >
         <Container>
@@ -357,6 +362,10 @@ export default function Main() {
             <Combination />
           </Box>
           <DesignBlocks />
+          <Navigation />
+          <InputAreas />
+          <AttentionCatchers />
+          <Elements />
         </Container>
       </Box>
     </>

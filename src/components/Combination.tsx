@@ -23,7 +23,7 @@ export const Combination = () => {
                         py: 0.5,
                         fontSize: '14px',
                         fontWeight: 'bold',
-                        mb: 2, // Add spacing below the badge
+                        mb: 2, 
                     }}
                 >
                     Infinite combinations
