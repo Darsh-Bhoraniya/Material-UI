@@ -193,7 +193,7 @@ export default function Main() {
                   sx={{
                     width: '100%',
                     height: '100%',
-                    perspective: '1000px', // 3D perspective
+                    perspective: '1000px',
                   }}
                 >
                   <Box
@@ -202,11 +202,10 @@ export default function Main() {
                       transformStyle: 'preserve-3d',
                       transition: 'transform 0.6s',
                       '&:hover': {
-                        transform: 'rotateY(180deg)', // Rotate on hover
+                        transform: 'rotateY(180deg)',
                       },
                     }}
                   >
-                    {/* Front Side */}
                     <Box
                       sx={{
                         backgroundImage:
@@ -237,7 +236,9 @@ export default function Main() {
                     {/* Back Side (Hidden initially) */}
                     <Box
                       sx={{
-                        backgroundColor: 'rgba(33, 150, 243, 0.9)', // Change the background as needed
+                        backgroundImage:
+                          'url(https://demos.creative-tim.com/otis-kit-pro/static/media/rotating-card-bg-front.bdcdfadc0dacb9bc5f23.jpeg)',
+                        backgroundColor: 'rgba(33, 150, 243, 0.9)',
                         borderRadius: '12px',
                         height: '100%',
                         display: 'flex',
