@@ -4,6 +4,9 @@ import Header from "./Header";
 import PanToolAltOutlinedIcon from '@mui/icons-material/PanToolAltOutlined';
 import { CopyAll, Devices, LibraryBooks, LocalAtm } from "@mui/icons-material";
 import LocalAtmOutlinedIcon from '@mui/icons-material/LocalAtmOutlined';
+import { Combination } from "./Combination";
+import { BlockSection } from "./BlockSection";
+import { DesignBlocks } from "./DesignBlocks";
 // Code: Main component
 export default function Main() {
   return (
@@ -186,8 +189,12 @@ export default function Main() {
           </Grid>
 
           {/* Third Components Start */}
+
           <Box sx={{ mt: 8, mx: 'auto', maxWidth: '1200px' }}>
             <Grid container spacing={4} alignItems="center" justifyContent="center">
+
+              {/* Left Content Section */}
+
               <Grid item xs={12} sm={4} sx={{ pr: 2 }}>
                 <Box
                   sx={{
@@ -206,6 +213,7 @@ export default function Main() {
                       },
                     }}
                   >
+                    {/* Front Side */}
                     <Box
                       sx={{
                         backgroundImage:
@@ -221,7 +229,7 @@ export default function Main() {
                         alignItems: 'center',
                         justifyContent: 'center',
                         textAlign: 'center',
-                        backfaceVisibility: 'hidden', // Hide the back side while front is visible
+                        backfaceVisibility: 'hidden',
                       }}
                     >
                       <PanToolAltOutlinedIcon sx={{ color: 'white', fontSize: '50px', mb: 2 }} />
@@ -233,30 +241,31 @@ export default function Main() {
                       </Typography>
                     </Box>
 
-                    {/* Back Side (Hidden initially) */}
+                    {/* Back Side */}
                     <Box
                       sx={{
                         backgroundImage:
                           'url(https://demos.creative-tim.com/otis-kit-pro/static/media/rotating-card-bg-front.bdcdfadc0dacb9bc5f23.jpeg)',
                         backgroundColor: 'rgba(33, 150, 243, 0.9)',
                         borderRadius: '12px',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        p: 4,
                         height: '100%',
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
                         justifyContent: 'center',
                         textAlign: 'center',
-                        transform: 'rotateY(180deg)', // Initially rotated 180 degrees (hidden)
-                        backfaceVisibility: 'hidden', // Hide the back side while front is visible
-                        p: 4,
+                        transform: 'rotateY(180deg)',
+                        backfaceVisibility: 'hidden',
                       }}
                     >
-                      {/* You can add similar content to the back side or customize it */}
                       <Typography variant="h5" sx={{ fontWeight: 'bold', color: 'white', mb: 1 }}>
-                        Back Side Content
+                        Discover More
                       </Typography>
-                      <Typography sx={{ color: 'white', opacity: 0.8 }}>
-                        More details about the Material Kit can be found here.
+                      <Typography sx={{ color: 'black', opacity: 0.8 }}>
+                        You will save a lot of time going from prototyping to full-functional code because all elements are implemented.
                       </Typography>
                     </Box>
                   </Box>
@@ -264,9 +273,19 @@ export default function Main() {
               </Grid>
 
 
+
               {/* Right Content Section */}
               <Grid item xs={12} sm={8} sx={{ pl: 2 }}>
-                <Grid container spacing={4}>
+                <Grid
+                  container
+                  spacing={4}
+                  sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    height: '100%',
+                  }}
+                >
                   <Grid item xs={12} sm={6}>
                     <Box sx={{ display: 'flex', alignItems: 'flex-start' }}>
                       <CopyAll sx={{ color: '#2196F3', fontSize: '32px', mr: 2 }} />
@@ -275,8 +294,7 @@ export default function Main() {
                           Full Documentation
                         </Typography>
                         <Typography sx={{ color: '#777', mt: 1 }}>
-                          Built by developers for developers. Check the foundation and you will find
-                          everything inside our documentation.
+                          Built by developers for developers. Check the foundation and you will find everything inside our documentation.
                         </Typography>
                       </Box>
                     </Box>
@@ -305,8 +323,7 @@ export default function Main() {
                           Save Time & Money
                         </Typography>
                         <Typography sx={{ color: '#777', mt: 1 }}>
-                          Creating your design from scratch with dedicated designers can be very expensive.
-                          Start with our Design System.
+                          Creating your design from scratch with dedicated designers can be very expensive. Start with our Design System.
                         </Typography>
                       </Box>
                     </Box>
@@ -320,8 +337,7 @@ export default function Main() {
                           Fully Responsive
                         </Typography>
                         <Typography sx={{ color: '#777', mt: 1 }}>
-                          Regardless of the screen size, the website content will naturally fit the given
-                          resolution.
+                          Regardless of the screen size, the website content will naturally fit the given resolution.
                         </Typography>
                       </Box>
                     </Box>
@@ -330,6 +346,17 @@ export default function Main() {
               </Grid>
             </Grid>
           </Box>
+
+          {/* Combination Task components */}
+          <Box sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            mt: 4,
+          }}>
+            <Combination />
+          </Box>
+          <DesignBlocks />
         </Container>
       </Box>
     </>
